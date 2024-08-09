@@ -1,0 +1,112 @@
+aside {
+  background-color: rgb(75,85,95);
+}
+
+.controls {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.controls button {
+  width: 1rem;
+  height: 1rem;
+
+  margin: 0.25rem;
+
+  background-color: yellow;
+  border-radius: 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.controls .close {
+  background-color: rgb(248,113,113);
+}
+
+.controls .close:hover,
+.controls.close:active {
+  background-color: rgb(240, 64, 64);
+}
+
+.controls .minimize {
+  background-color: rgb(252,211,77);
+}
+
+.controls .minimize:hover,
+.controls.minimize:active {
+  background-color: rgb(245, 158, 11);
+}
+
+.controls .maximize {
+  background-color: rgb(52,211,153);
+}
+
+.controls .maximize:hover,
+.controls.maximize:active {
+  background-color: rgb(16, 185, 129  );
+}
+
+/* FORM */
+input {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+
+  width: 100%;
+  padding: 0.5rem 0.9rem;
+
+  border: none;;
+  border-top: 1px solid rgb(55,65,81);
+  border-left: 1px solid rgb(55,65,81);
+  border-radius: 0.375rem;
+}
+
+input::placeholder {
+  color: white;
+  font-weight: normal;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(0, 0, 0);
+}
+
+/* navigation */
+nav {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+nav a {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav a:hover,
+nav a:active {
+  color: white;
+}
+
+nav .today:hover,
+nav .today:active {
+  background-color: var(--color-today);
+}
+
+nav .scheduled:hover,
+nav .scheduled:active {
+  background-color: var(--color-scheduled);
+}
+
+nav .all:hover,
+nav .all:active {
+  background-color: var(--color-all);
+}
+
+nav .flagged:hover,
+nav .flagged:active {
+  background-color: var(--color-flagged);
+}

@@ -1,0 +1,50 @@
+main {
+  border-left: 2px solid #000;
+}
+
+.add-new {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.add-new button {
+  font-size: 1.5rem;
+
+  padding: 0.215rem 0.575rem 0.425rem 0.525rem;
+
+  border-radius: 0.375rem;
+
+  position: relative;
+  bottom: 0.275rem;
+  right: -0.275rem;
+}
+
+.add-new button:hover,
+.add-new button:active{
+  background-color: rgb(55,65,81);
+}
+
+/* titles */
+h1 {
+  font-size: 2.25rem;
+  font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
+  margin-bottom: 1.725rem;
+}
+
+
+h1.today {
+  color: var(--color-today);
+}
+
+h1.scheduled {
+  color: var(--color-scheduled)
+}
+
+h1.all {
+  color: var(--color-all);
+}
+
+h1.flagged {
+  color: var(--color-flagged);
+}

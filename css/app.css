@@ -1,0 +1,46 @@
+:root {
+  --color-today: rgb(96, 165, 250);
+  --color-scheduled: rgb(239, 68, 68);
+  --color-all: rgb(55, 65, 81);
+  --color-flagged: rgb(245, 158, 11);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: rgb(237,237,237);
+
+  background-image: linear-gradient(
+    to right, 
+    rgb(248,113,133),
+    rgb(243, 93, 170)
+  );
+
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 52rem;
+  height: 36rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  overflow: hidden;
+
+  border: 2px solid black;
+  background-color: rgb(24, 33, 46);
+  border-radius: 12px;
+}
+
+aside, main {
+  padding: 1.25rem ;
+}
