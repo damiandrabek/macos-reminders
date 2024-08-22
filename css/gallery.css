@@ -1,0 +1,65 @@
+.new-css {
+  margin: 10rem 0;
+  --color-img-background: oklch(64.4% 0.199 351.68);
+}
+
+.gallery {
+  --speed: 0.3s;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  margin: 2rem 0;
+}
+
+.gallery figure {
+  height: auto;
+
+  background-color: var(--color-img-background);
+  border-radius: 50%;
+
+  border: 1px solid black;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: 
+    scale var(--speed) ease,
+    rotate var(--speed) ease-in-out,
+    opacity var(--speed) ease-in-out,
+    border-radius var(--speed) linear;
+}
+
+@media (any-hover: hover) {
+  .gallery figure {
+    width: 10rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .gallery {
+    gap: 1rem;
+  }
+
+  .gallery figure {
+    width: 7rem;
+  }
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery:has(img:hover) figure:not(:hover) {
+  scale: 0.9;
+  opacity: 0.4;
+  /* rotate: 0.5turn; */
+  border-radius: 35%;
+}
+
+.gallery figure:hover,
+.gallery figure:active {
+  transform: scale(1.05);
+}

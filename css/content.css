@@ -29,12 +29,15 @@ main {
 h1 {
   font-size: 2.25rem;
   font-family: "Arial Rounded MT Bold", "Nunito", sans-serif;
-  margin-bottom: 1.725rem;
+  margin-bottom: 1.5rem;
+  /* vymaz */
+  display: none;
 }
 
 
 h1.today {
   color: var(--color-today);
+  display: block;
 }
 
 h1.scheduled {
@@ -47,4 +50,38 @@ h1.all {
 
 h1.flagged {
   color: var(--color-flagged);
+}
+
+/* TODOS */
+.todos li {
+  display: flex;
+  line-height: 1.25;
+}
+
+.todos p {
+  padding: 0.625rem 0;
+  border-bottom: 1px solid rgb(55, 65, 81);
+  flex-grow: 1;
+}
+
+.todos svg {
+  flex: none;
+
+  width: 2rem;
+  height: 2rem; 
+
+  margin-top: 0.425rem;
+  margin-right: 0.425rem;
+
+  stroke: rgb(28, 34, 43);
+  stroke-width: 1;
+
+  fill: rgb(55, 65, 81);
+
+  cursor: pointer;
+}
+
+.todos svg:hover,
+.todos svg:active {
+  fill: rgb(251, 191, 36);
 }

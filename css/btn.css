@@ -1,0 +1,89 @@
+:root {
+  --btn-size: clamp(2rem, 4rem, 8rem);
+  --color-text: black;
+  --btn-background: white;
+  --btn-border-size: 2px;
+  --color-border-darker: rgba(0,0,0, 0.67);
+  --btn-padding: 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  place-items: center;
+
+  color: var(--color-text);
+  background-color: var(--btn-background);
+
+  border-radius: var(--btn-size);
+  border: var(--btn-border-size, 2px) solid var(--color-border-darker); 
+
+  margin-top: 2rem;
+  padding: var(--btn-padding, 0.25em 0.55em);
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  text-align: center;
+  text-wrap: nowrap;
+
+  img {
+    inline-size: 1.3em;
+    max-inline-size: unset;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* circle buttons */
+  &:has(.for-screen-reader):has(img, figure) {
+    display: grid;
+    aspect-ratio: 1;
+    block-size: var(--btn-size);
+    inline-size: var(--btn-size);
+  }
+
+  &:not(:has(.for-screen-reader)):has(img, figure) {
+    --btn-border-radius: 50%;
+    --btn-padding: 0;
+    --btn-border-radius: 0;
+    --hover-size: 0;
+    --btn-size: 2.75em;
+
+    img {
+      aspect-ratio: 1 / 1;
+      block-size: auto;
+      border-radius: 50%;
+      inline-size: var(--btn-size, 5ch);
+      object-fit: cover;
+    }
+
+    @media (any-hover: hover) {
+      &:where(:not(:active):hover) {
+        filter:brightness(0.7)
+      }
+    }
+}
+
+.btn:hover,
+.btn:active {
+  border: calc(var(--btn-border-size) * 2) solid var(--color-border-darker);
+}
+
+.btn:focus {
+  border: var(--btn-border-size) solid var(--color-border-darker);
+}
+
+/* accessibility */
+.for-screen-reader {
+  block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+}
